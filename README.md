@@ -4,22 +4,23 @@
 **Author:** Valentine Joseph Owan  
 
 ---
-
 ## 📌 Overview
+This project investigates a long-standing assumption in measurement theory that internal consistency indices reflect the extent to which items measure a common underlying construct. In practice, however, these indices may also be influenced by how respondents answer items, including systematic response patterns such as acquiescence, extreme responding, or inconsistency.
 
-This project presents a large-scale simulation study examining the behaviour of internal consistency estimates under varying measurement conditions. Specifically, the study investigates whether commonly used reliability coefficients reflect true shared construct variance or are influenced by systematic response patterns.
+To examine this issue, a Monte Carlo simulation study was conducted to evaluate the behaviour of two widely used reliability coefficients, Cronbach’s Alpha and McDonald’s Omega, under a range of controlled conditions.
 
-Two widely used indices are examined:
+The simulation varies four key factors:
 
-- Cronbach’s Alpha  
-- McDonald’s Omega  
+Sample size (from very small to large samples)
+Scale length (number of items)
+Data distribution (normal, skewed, and heavy-tailed)
+Response patterns (consistent, acquiescent, extreme, and inconsistent responding)
 
-The simulation evaluates how these indices behave under different combinations of:
+By systematically manipulating these conditions, the study evaluates how internal consistency estimates behave when underlying assumptions are met versus when they are violated.
 
-- Sample size  
-- Scale length  
-- Data distribution  
-- Response patterns  
+The results provide evidence on whether reliability coefficients primarily reflect shared construct variance or are partly driven by response behaviour. The project also compares the stability and sensitivity of alpha and omega under different conditions.
+
+All simulation code, raw data, and full results are provided to ensure transparency and reproducibility. Selected results are used in the accompanying manuscript for clarity, while the complete dataset is available in this repository.
 
 ---
 
@@ -57,26 +58,6 @@ Monte Carlo simulation was used to generate item-level data under controlled con
 For each condition, multiple replications were performed, and both reliability indices were computed.
 
 ---
-
-## 📂 Project Structure
-project/
-│
-├── run_simulation.R
-├── run_analysis.R
-├── results_raw.csv
-├── README.md
-│
-├── outputs/
-│ ├── Table_Obj1_Response_Full.csv
-│ ├── Table_Obj2_Alpha_vs_Omega_Full.csv
-│ ├── Table_Obj3_SampleSize_Full.csv
-│ ├── Table_Obj3_SampleSize_Summary.csv
-│ ├── Table_Obj4_Distribution_Full.csv
-│ ├── Table_Obj5_ScaleLength_Full.csv
-│ ├── Table_Obj6_JointEffects_Full.csv
-│ ├── results_summary.csv
-│ ├── Supplementary_FullResults.csv
-
 
 ---
 
